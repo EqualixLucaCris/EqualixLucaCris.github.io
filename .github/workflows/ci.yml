@@ -27,3 +27,11 @@ jobs:
 
       - name: Verify index is not empty
         run: test -s index.html
+
+      - name: Verify stylesheet and profile image exist
+        run: |
+          test -s css/style.css
+          test -s img/profile_pic.jpg
+
+      - name: Verify profile image is referenced in HTML
+        run: grep -Fq 'img/profile_pic.jpg' index.html
