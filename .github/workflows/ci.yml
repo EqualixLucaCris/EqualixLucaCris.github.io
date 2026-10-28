@@ -1,4 +1,4 @@
-name: Validate portfolio files
+name: Validate and deploy portfolio
 
 on:
   push:
@@ -12,6 +12,7 @@ permissions:
 jobs:
   check-readme:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
@@ -21,17 +22,142 @@ jobs:
 
   check-index:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
 
-      - name: Verify index is not empty
-        run: test -s index.html
-
-      - name: Verify stylesheet and profile image exist
+      - name: Verify portfolio files are not empty
         run: |
+          test -s index.html
           test -s css/style.css
           test -s img/profile_pic.jpg
+          test -s js/i18n.js
 
-      - name: Verify profile image is referenced in HTML
-        run: grep -Fq 'img/profile_pic.jpg' index.html
+      - name: Verify image, stylesheet and script are referenced in HTML
+        run: |
+          grep -Fq 'img/profile_pic.jpg' index.html
+          grep -Fq 'css/style.css' index.html
+          grep -Fq 'js/i18n.js' index.html
+
+  check-i18n:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Check JavaScript syntax
+        run: node --check js/i18n.js
+
+      - name: Check all HTML translation keys exist in EN, NL and FR
+        run: |
+          python3 - <<'PY'
+          import json
+          import subprocess
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class TranslationKeys(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.keys = set()
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if 'data-i18n' in attrs:
+                      self.keys.add(attrs['data-i18n'])
+
+          parser = TranslationKeys()
+          parser.feed(Path('index.html').read_text(encoding='utf-8'))
+          if not parser.keys or None in parser.keys or '' in parser.keys:
+              raise SystemExit('Missing or empty data-i18n keys in index.html')
+
+          # Simulate the DOM so the existing browser script can be loaded.
+          node_code = r'''
+          const fs = require('node:fs');
+          const vm = require('node:vm');
+          const context = {
+            document: {
+              documentElement: { lang: 'en' },
+              getElementById: () => ({ value: 'en', addEventListener() {} }),
+              querySelectorAll: () => []
+            }
+          };
+          const source = fs.readFileSync('js/i18n.js', 'utf8');
+          const result = vm.runInNewContext(
+            source + '\nJSON.stringify(translations);', context, { timeout: 1000 }
+          );
+          process.stdout.write(result);
+          '''
+          result = subprocess.run(
+              ['node', '-e', node_code],
+              capture_output=True, text=True, check=True, timeout=10
+          )
+          translations = json.loads(result.stdout)
+          errors = []
+          for language in ('en', 'nl', 'fr'):
+              dictionary = translations.get(language, {})
+              if not isinstance(dictionary, dict):
+                  errors.append(f'{language}: invalid translation dictionary')
+                  continue
+              for key in sorted(parser.keys):
+                  value = dictionary.get(key)
+                  if not isinstance(value, str) or not value.strip():
+                      errors.append(f'{language}: missing or empty translation for {key}')
+
+          if errors:
+              raise SystemExit('\n'.join(errors))
+          print(f'OK: {len(parser.keys)} HTML keys translated in EN, NL and FR')
+          PY
+
+  deploy:
+    # A failed check or a pull request must never publish the site.
+    needs: [check-readme, check-index, check-i18n]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Prepare website files
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -R css img js _site/
+          if [ -f .nojekyll ]; then
+            cp .nojekyll _site/
+          fi
+
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
