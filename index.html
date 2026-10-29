@@ -77,7 +77,7 @@
   </div>
 </div>
 </section>
-<div class="focus-strip"><div class="container focus-inner"><span>MY FOCUS</span><p>CODESYS</p><span class="separator" aria-hidden="true">/</span><p>Azure Cloud</p><span class="separator" aria-hidden="true">/</span><p>Data</p><span class="separator" aria-hidden="true">/</span><p>DevOps &amp; Automation</p></div></div>
+<div class="focus-strip"><div class="container focus-inner"><span>MY FOCUS</span><p>CODESYS</p><span class="separator" aria-hidden="true">/</span><p>Azure Cloud</p><span class="separator" aria-hidden="true">/</span><p>DevOps &amp; Automation</p><span class="separator" aria-hidden="true">/</span><p>Data</p></div></div>
 <section class="section container about-grid"
          id="about"
          aria-labelledby="about-title">
@@ -129,23 +129,22 @@
       <h3 data-i18n="education_bachelor">Bachelor's Degree in IT</h3>
       <p>Institut des Carrières Commerciales (ICC), Brussels</p>
       <p>
-        [Start year] –
         <span data-i18n="education_present">Present</span>
       </p>
     </article>
 
     <article class="project-card">
       <h3 data-i18n="education_it_diploma">IT Diploma</h3>
-      <p>[School name, city]</p>
-      <p>[Graduation year]</p>
+      <p>UniNA Federico II, Italy</p>
+      <p></p>
     </article>
 
     <article class="project-card">
       <h3 data-i18n="education_industrial_diploma">
-        Industrial Technical Diploma
+        Industrial Electrician Diploma
       </h3>
-      <p>[School name, city]</p>
-      <p>[Graduation year]</p>
+      <p>VI ITIS , Italy</p>
+      <p></p>
     </article>
 
   </div>
@@ -174,18 +173,26 @@
       <article class="skill-card">
         <span class="icon-box" aria-hidden="true">
           <svg viewBox="0 0 24 24">
-            <path d="M7 18H6a4 4 0 0 1-.6-8A6.5 6.5 0 0 1 18 8.5a4.8 4.8 0 0 1 0 9.5h-1M9 17l3-3 3 3m-3-3v7"/>
+            <circle cx="6" cy="5" r="2"/>
+            <circle cx="6" cy="19" r="2"/>
+            <circle cx="18" cy="5" r="2"/>
+            <path d="M6 7v10m0-4c8 0 12-1 12-6"/>
           </svg>
         </span>
 
-        <h3 data-i18n="skills_cloud_title">Cloud &amp; platforms</h3>
-        <p data-i18n="skills_cloud_description">
-          Exploring cloud services and how data workloads fit together.
+        <h3 data-i18n="skills_devops_title">DevOps &amp; automation</h3>
+        <p data-i18n="skills_devops_description">
+          Versioning code, organising work and automating repeatable checks.
         </p>
 
-        <ul class="tags" aria-label="Cloud tools">
-          <li>Microsoft Azure</li>
-          <li>Databricks</li>
+        <ul class="tags" aria-label="DevOps tools">
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>GitHub Actions</li>
+          <li>Azure DevOps</li>
+          <li>YAML</li>
+          <li>Bash</li>
+          <li>Terraform (learning)</li>
         </ul>
       </article>
 
@@ -205,6 +212,8 @@
         <ul class="tags" aria-label="Programming tools">
           <li>Python</li>
           <li>SQL</li>
+          <li>PostgreSQL</li>
+          <li>DuckDB</li>
           <li>C</li>
         </ul>
       </article>
@@ -212,23 +221,37 @@
       <article class="skill-card">
         <span class="icon-box" aria-hidden="true">
           <svg viewBox="0 0 24 24">
-            <circle cx="6" cy="5" r="2"/>
-            <circle cx="6" cy="19" r="2"/>
-            <circle cx="18" cy="5" r="2"/>
-            <path d="M6 7v10m0-4c8 0 12-1 12-6"/>
+            <path d="M7 3v18M17 3v18M7 8h10M7 16h10"/>
           </svg>
         </span>
 
-        <h3 data-i18n="skills_devops_title">DevOps &amp; automation</h3>
-        <p data-i18n="skills_devops_description">
-          Versioning code, organising work and automating repeatable checks.
+        <h3 data-i18n="skills_industrial_title">Industrial automation</h3>
+        <p data-i18n="skills_industrial_description">
+          Programming PLCs and control logic for industrial systems.
         </p>
 
-        <ul class="tags" aria-label="DevOps tools">
-          <li>Git</li>
-          <li>GitHub Actions</li>
-          <li>Azure DevOps</li>
-          <li>Bash</li>
+        <ul class="tags" aria-label="Industrial automation tools">
+          <li>CODESYS</li>
+          <li>Ladder Diagram (LD)</li>
+        </ul>
+      </article>
+
+      <article class="skill-card">
+        <span class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 18H6a4 4 0 0 1-.6-8A6.5 6.5 0 0 1 18 8.5a4.8 4.8 0 0 1 0 9.5h-1M9 17l3-3 3 3m-3-3v7"/>
+          </svg>
+        </span>
+
+        <h3 data-i18n="skills_cloud_title">Cloud &amp; platforms</h3>
+        <p data-i18n="skills_cloud_description">
+          Exploring cloud services and how data workloads fit together.
+        </p>
+
+        <ul class="tags" aria-label="Cloud tools">
+          <li>Microsoft Azure</li>
+          <li>Docker</li>
+          <li>Databricks (learning)</li>
         </ul>
       </article>
 
@@ -340,18 +363,16 @@
       </p>
 
       <h2 id="certifications-title">
-        <span data-i18n="certifications_title_first">A place for</span><br>
-        <span data-i18n="certifications_title_second">the next milestones.</span>
+        <span data-i18n="certifications_title_first">Verified credentials,</span><br>
+        <span data-i18n="certifications_title_second">and more on the way.</span>
       </h2>
 
       <p data-i18n="certifications_intro">
-        I'm developing my cloud skills. This section will grow with
-        verified credentials as I earn them.
+        Cloud and industrial credentials, with new milestones on the way.
       </p>
     </div>
 
-    <!-- After earning a credential, add its exact title,
-         official badge and public verification URL. -->
+    <!-- Microsoft Azure Fundamentals -->
     <article class="certification-card">
       <div class="certification-symbol" aria-hidden="true">
         <svg viewBox="0 0 48 48">
@@ -361,15 +382,48 @@
       </div>
 
       <div>
-        <span class="pill" data-i18n="certifications_status">
-          Coming soon
+        <span class="pill" data-i18n="certifications_status_earned">
+          Earned
         </span>
-        <h3 data-i18n="certifications_azure">
-          Microsoft Azure certifications
-        </h3>
-        <p data-i18n="certifications_details">
-          Earned credentials and verification links will appear here.
+        <h3>Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+        <p data-i18n="certifications_az900_details">
+          Cloud concepts, Azure services, security, governance and pricing.
         </p>
+        <a class="certification-link"
+           href="https://learn.microsoft.com/api/credentials/share/it-it/LucaVittorioBCristallini-2553/C02EACA544ED154F?sharingId=A0D18865BD56AAA1"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-i18n="certifications_verify">
+          Verify credential
+        </a>
+      </div>
+    </article>
+
+    <!-- Industrial & safety certifications -->
+    <article class="certification-card">
+      <div class="certification-symbol" aria-hidden="true">
+        <svg viewBox="0 0 48 48">
+          <path d="M24 5 8 11v11c0 10 7 18 16 21 9-3 16-11 16-21V11z"/>
+          <path d="m17 24 5 5 9-10"/>
+        </svg>
+      </div>
+
+      <div>
+        <span class="pill" data-i18n="certifications_status_earned">
+          Earned
+        </span>
+        <h3 data-i18n="certifications_industrial_title">
+          Industrial &amp; safety certifications
+        </h3>
+        <p data-i18n="certifications_industrial_details">
+          Safety and technical qualifications for industrial environments.
+        </p>
+
+        <ul class="tags" aria-label="Industrial certifications">
+          <li>VCA</li>
+          <li>BA5</li>
+          <!-- add the others here, e.g. <li>Name</li> -->
+        </ul>
       </div>
     </article>
   </div>
