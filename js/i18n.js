@@ -1,6 +1,14 @@
 // Traduzioni: ogni lingua usa le stesse chiavi.
 const translations = {
   en: {
+    nav_about: "About",
+    nav_education: "Education",
+    nav_languages: "Languages",
+    nav_skills: "Skills",
+    nav_projects: "Projects",
+    nav_certifications: "Certifications",
+    nav_contact: "Contact",
+
     hero_eyebrow: "Strong roots in Industrial Automation · Evolving towards Cloud & DevOps Engineering",
     hero_title_first: "Automation with purpose.",
     hero_title_second: "Better workflows by design.",
@@ -8,12 +16,17 @@ const translations = {
     hero_projects: "Explore my projects",
     hero_github: "View GitHub",
     hero_note: "Continuous learning. Formal study. Practical experience.",
+
+    portrait_title: "One project at a time.",
+    portrait_description: "From understanding to implementation.",
+
     about_eyebrow: "01 / ABOUT ME",
     about_title_first: "Curiosity into",
     about_title_second: "practical experience.",
     about_background: "Based in Belgium, I bring 15 years of professional experience in industrial automation. Alongside my IT studies, I’m expanding into Azure cloud and DevOps engineering, building on years of practical problem-solving.",
     about_focus: "Python is my main programming language, and my current focus is on scripting, version control and CI/CD with GitHub Actions. My earlier data engineering projects also form part of this portfolio, where I share ongoing work, technical experience and progress towards new professional goals.",
     about_connect: "Let's connect",
+
     education_eyebrow: "02 / EDUCATION",
     education_title: "Education & qualifications.",
     education_status: "In progress",
@@ -21,7 +34,15 @@ const translations = {
     education_present: "Present",
     education_it_diploma: "IT Diploma",
     education_industrial_diploma: "Industrial Technical Diploma",
-    skills_eyebrow: "03 / SKILLS",
+
+    languages_eyebrow: "03 / LANGUAGES",
+    languages_title: "Languages & Communication.",
+    languages_english: "English",
+    languages_dutch: "Dutch",
+    credential_verify: "Verify credential",
+    credential_view: "View certificate",
+
+    skills_eyebrow: "04 / SKILLS",
     skills_title: "My growing toolkit.",
     skills_intro_first: "Tools I'm learning and using",
     skills_intro_second: "through coursework and projects.",
@@ -34,7 +55,7 @@ const translations = {
     skills_industrial_title: "Industrial automation",
     skills_industrial_description: "Programming PLCs and control logic for industrial systems.",
 
-    projects_eyebrow: "04 / PROJECTS",
+    projects_eyebrow: "05 / PROJECTS",
     projects_title: "Learning, put into practice.",
     projects_browse: "Browse my repositories",
     projects_learning: "Learning project",
@@ -48,7 +69,8 @@ const translations = {
     projects_retail_category: "DATA & ANALYTICS",
     projects_blog_description: "A team project to build a technical blog while practising Agile planning, version control and continuous integration.",
     projects_blog_category: "TEAMWORK & DEVOPS",
-    certifications_eyebrow: "05 / CERTIFICATIONS",
+
+    certifications_eyebrow: "06 / CERTIFICATIONS",
     certifications_title_first: "Verified credentials,",
     certifications_title_second: "and more on the way.",
     certifications_intro: "Cloud and industrial credentials, with new milestones on the way.",
@@ -58,22 +80,22 @@ const translations = {
     certifications_industrial_title: "Industrial & safety certifications",
     certifications_industrial_details: "Safety and technical qualifications for industrial environments.",
 
-    contact_eyebrow: "06 / CONTACT",
+    contact_eyebrow: "07 / CONTACT",
     contact_title: "Let's build connections.",
     contact_intro_first: "Interested in cloud, data or automation?",
     contact_intro_second: "Find my projects and follow my progress on GitHub.",
-    contact_github: "Connect on GitHub",
-    portrait_title: "One project at a time.",
-    portrait_description: "From understanding to implementation.",
-    nav_about: "About",
-    nav_education: "Education",
-    nav_skills: "Skills",
-    nav_projects: "Projects",
-    nav_certifications: "Certifications",
-    nav_contact: "Contact"
+    contact_github: "Connect on GitHub"
   },
 
   nl: {
+    nav_about: "Over mij",
+    nav_education: "Opleiding",
+    nav_languages: "Talen",
+    nav_skills: "Vaardigheden",
+    nav_projects: "Projecten",
+    nav_certifications: "Certificeringen",
+    nav_contact: "Contact",
+
     hero_eyebrow: "Een stevige basis in industriële automatisering · Op weg naar cloud- en DevOps-engineering",
     hero_title_first: "Automatisering met een doel.",
     hero_title_second: "Betere workflows, doordacht ontworpen.",
@@ -81,12 +103,17 @@ const translations = {
     hero_projects: "Ontdek mijn projecten",
     hero_github: "Bekijk mijn GitHub",
     hero_note: "Continu leren. Formele opleiding. Praktijkervaring.",
+
+    portrait_title: "Eén project tegelijk.",
+    portrait_description: "Van inzicht naar uitvoering.",
+
     about_eyebrow: "01 / OVER MIJ",
     about_title_first: "Van nieuwsgierigheid naar",
     about_title_second: "praktijkervaring.",
     about_background: "Ik woon in België en heb 15 jaar professionele ervaring in industriële automatisering. Naast mijn IT-studie verdiep ik me in Azure-cloud en DevOps-engineering, voortbouwend op jaren ervaring met het oplossen van praktische problemen.",
     about_focus: "Python is mijn belangrijkste programmeertaal. Momenteel richt ik me op scripting, versiebeheer en CI/CD met GitHub Actions. Ook mijn eerdere projecten rond data-engineering maken deel uit van dit portfolio, waarin ik lopend werk, technische ervaring en mijn voortgang naar nieuwe professionele doelen deel.",
     about_connect: "Neem contact op",
+
     education_eyebrow: "02 / OPLEIDING",
     education_title: "Opleiding & kwalificaties.",
     education_status: "In uitvoering",
@@ -94,7 +121,15 @@ const translations = {
     education_present: "Heden",
     education_it_diploma: "Diploma informatica",
     education_industrial_diploma: "Industrieel technisch diploma",
-    skills_eyebrow: "03 / VAARDIGHEDEN",
+
+    languages_eyebrow: "03 / TALEN",
+    languages_title: "Talen & communicatie.",
+    languages_english: "Engels",
+    languages_dutch: "Nederlands",
+    credential_verify: "Certificaat verifiëren",
+    credential_view: "Certificaat bekijken",
+
+    skills_eyebrow: "04 / VAARDIGHEDEN",
     skills_title: "Mijn groeiende toolkit.",
     skills_intro_first: "Tools die ik leer kennen en gebruik",
     skills_intro_second: "tijdens mijn opleiding en projecten.",
@@ -107,7 +142,7 @@ const translations = {
     skills_industrial_title: "Industriële automatisering",
     skills_industrial_description: "PLC’s en besturingslogica programmeren voor industriële systemen.",
 
-    projects_eyebrow: "04 / PROJECTEN",
+    projects_eyebrow: "05 / PROJECTEN",
     projects_title: "Leren in de praktijk.",
     projects_browse: "Bekijk mijn repositories",
     projects_learning: "Leerproject",
@@ -121,7 +156,8 @@ const translations = {
     projects_retail_category: "DATA & ANALYSE",
     projects_blog_description: "Een teamproject om een technische blog te bouwen en ervaring op te doen met Agile-planning, versiebeheer en continue integratie.",
     projects_blog_category: "TEAMWERK & DEVOPS",
-    certifications_eyebrow: "05 / CERTIFICERINGEN",
+
+    certifications_eyebrow: "06 / CERTIFICERINGEN",
     certifications_title_first: "Geverifieerde certificeringen,",
     certifications_title_second: "en er komen er meer aan.",
     certifications_intro: "Cloud- en industriële certificeringen, met nieuwe mijlpalen op komst.",
@@ -131,22 +167,22 @@ const translations = {
     certifications_industrial_title: "Industriële en veiligheidscertificeringen",
     certifications_industrial_details: "Veiligheids- en technische kwalificaties voor industriële omgevingen.",
 
-    contact_eyebrow: "06 / CONTACT",
+    contact_eyebrow: "07 / CONTACT",
     contact_title: "Laten we contact leggen.",
     contact_intro_first: "Interesse in cloud, data of automatisering?",
     contact_intro_second: "Ontdek mijn projecten en volg mijn voortgang op GitHub.",
-    contact_github: "Neem contact op via GitHub",
-    portrait_title: "Eén project tegelijk.",
-    portrait_description: "Van inzicht naar uitvoering.",
-    nav_about: "Over mij",
-    nav_education: "Opleiding",
-    nav_skills: "Vaardigheden",
-    nav_projects: "Projecten",
-    nav_certifications: "Certificeringen",
-    nav_contact: "Contact"
+    contact_github: "Neem contact op via GitHub"
   },
 
   fr: {
+    nav_about: "À propos",
+    nav_education: "Formation",
+    nav_languages: "Langues",
+    nav_skills: "Compétences",
+    nav_projects: "Projets",
+    nav_certifications: "Certifications",
+    nav_contact: "Contact",
+
     hero_eyebrow: "Une solide expérience en automatisation industrielle · Une évolution vers le cloud et l’ingénierie DevOps",
     hero_title_first: "Une automatisation qui a du sens.",
     hero_title_second: "Des workflows mieux conçus.",
@@ -154,12 +190,17 @@ const translations = {
     hero_projects: "Découvrir mes projets",
     hero_github: "Voir mon GitHub",
     hero_note: "Apprentissage continu. Formation académique. Expérience pratique.",
+
+    portrait_title: "Un projet à la fois.",
+    portrait_description: "De la compréhension à la mise en œuvre.",
+
     about_eyebrow: "01 / À PROPOS",
     about_title_first: "De la curiosité à",
     about_title_second: "l’expérience pratique.",
     about_background: "Installé en Belgique, je bénéficie de 15 ans d’expérience professionnelle en automatisation industrielle. En parallèle de mes études en informatique, je développe mes compétences dans le cloud Azure et l’ingénierie DevOps, en m’appuyant sur des années de résolution de problèmes concrets.",
     about_focus: "Python est mon principal langage de programmation. Je me concentre actuellement sur le scripting, la gestion de versions et la CI/CD avec GitHub Actions. Mes précédents projets en ingénierie des données font également partie de ce portfolio, où je partage mes travaux en cours, mon expérience technique et mes avancées vers de nouveaux objectifs professionnels.",
     about_connect: "Contactez-moi",
+
     education_eyebrow: "02 / FORMATION",
     education_title: "Formation et qualifications.",
     education_status: "En cours",
@@ -167,7 +208,15 @@ const translations = {
     education_present: "Aujourd’hui",
     education_it_diploma: "Diplôme en informatique",
     education_industrial_diploma: "Diplôme technique industriel",
-    skills_eyebrow: "03 / COMPÉTENCES",
+
+    languages_eyebrow: "03 / LANGUES",
+    languages_title: "Langues et communication.",
+    languages_english: "Anglais",
+    languages_dutch: "Néerlandais",
+    credential_verify: "Vérifier le certificat",
+    credential_view: "Voir le certificat",
+
+    skills_eyebrow: "04 / COMPÉTENCES",
     skills_title: "Ma boîte à outils s’enrichit.",
     skills_intro_first: "Des outils que j’apprends à utiliser",
     skills_intro_second: "au fil de ma formation et de mes projets.",
@@ -180,7 +229,7 @@ const translations = {
     skills_industrial_title: "Automatisation industrielle",
     skills_industrial_description: "Programmer des automates (PLC) et la logique de commande de systèmes industriels.",
 
-    projects_eyebrow: "04 / PROJETS",
+    projects_eyebrow: "05 / PROJETS",
     projects_title: "L’apprentissage mis en pratique.",
     projects_browse: "Parcourir mes dépôts",
     projects_learning: "Projet d’apprentissage",
@@ -194,7 +243,8 @@ const translations = {
     projects_retail_category: "DONNÉES ET ANALYSE",
     projects_blog_description: "Un projet d’équipe pour créer un blog technique tout en pratiquant la planification Agile, la gestion de versions et l’intégration continue.",
     projects_blog_category: "TRAVAIL D’ÉQUIPE ET DEVOPS",
-    certifications_eyebrow: "05 / CERTIFICATIONS",
+
+    certifications_eyebrow: "06 / CERTIFICATIONS",
     certifications_title_first: "Des certifications vérifiées,",
     certifications_title_second: "et d’autres à venir.",
     certifications_intro: "Certifications cloud et industrielles, avec de nouvelles étapes à venir.",
@@ -204,45 +254,32 @@ const translations = {
     certifications_industrial_title: "Certifications industrielles et de sécurité",
     certifications_industrial_details: "Qualifications techniques et de sécurité pour les environnements industriels.",
 
-    contact_eyebrow: "06 / CONTACT",
+    contact_eyebrow: "07 / CONTACT",
     contact_title: "Créons des liens.",
     contact_intro_first: "Le cloud, les données ou l’automatisation vous intéressent ?",
     contact_intro_second: "Découvrez mes projets et suivez mes avancées sur GitHub.",
-    contact_github: "Retrouvez-moi sur GitHub",
-    portrait_title: "Un projet à la fois.",
-    portrait_description: "De la compréhension à la mise en œuvre.",
-    nav_about: "À propos",
-    nav_education: "Formation",
-    nav_skills: "Compétences",
-    nav_projects: "Projets",
-    nav_certifications: "Certifications",
-    nav_contact: "Contact"
+    contact_github: "Retrouvez-moi sur GitHub"
   }
 };
 
 const languageSelector = document.getElementById("language-selector");
 
 function changeLanguage(language) {
-  // Aggiorna la lingua dichiarata nella pagina.
   document.documentElement.lang = language;
 
-  // Cerca tutti gli elementi contrassegnati per la traduzione.
   document.querySelectorAll("[data-i18n]").forEach(element => {
     const key = element.dataset.i18n;
     const translation = translations[language]?.[key];
 
-    // Sostituisce il testo solo se la traduzione esiste.
     if (translation !== undefined) {
       element.textContent = translation;
     }
   });
 }
 
-// Reagisce alla scelta nel selettore.
 languageSelector.addEventListener("change", () => {
   changeLanguage(languageSelector.value);
 });
 
-// Applica la lingua selezionata al caricamento.
 changeLanguage(languageSelector.value);
 
